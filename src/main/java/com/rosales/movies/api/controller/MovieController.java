@@ -39,6 +39,11 @@ public class MovieController {
     return "Movie saved!";
   }
 
+  @GetMapping("/get/{id}")
+  public Movie getMovie(@PathVariable("id") long id) {
+    return movieRepo.findById(id).get();
+  }
+
   @PutMapping("/update/{id}")
   public String updateMovie(@PathVariable("id") long id, @RequestBody @NonNull Movie movie) {
     Movie existingMovie = movieRepo.findById(id).get();
