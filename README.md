@@ -1,36 +1,36 @@
 # MovieHub
 
-Este proyecto es una API RESTful de gestión de películas construida con Spring Boot y Maven. Proporciona operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para la entidad `Movie`. Cada película tiene un ID único, título, director, año de lanzamiento, país y género.
+This project is a RESTful movie management API built with Spring Boot and Maven. It provides CRUD (Create, Read, Update, Delete) operations for the `Movie` entity. Each movie has a unique ID, title, director, release year, country, and genre.
 
-Los usuarios pueden interactuar con la API para agregar nuevas películas a la base de datos, recuperar información sobre películas existentes, actualizar los detalles de las películas y eliminar películas. La API se comunica con una base de datos MySQL para almacenar y recuperar datos.
+Users can interact with the API to add new movies to the database, retrieve information about existing movies, update movie details, and delete movies. The API communicates with a MySQL database to store and retrieve data.
 
-## Prerrequisitos
+## Prerequisites
 
-Necesitarás tener instalado:
+You will need to have installed:
 
-- Java 8 o superior
+- Java 21
 - Maven
 - Postman
 
-## Cómo ejecutar el proyecto
+## How to Run the Project
 
-1. Clona el repositorio en tu máquina local usando `git clone https://github.com/xrimsonn/movies-crud-spring.git`.
+1. Clone the repository to your local machine using `git clone https://github.com/xrimsonn/movies-crud-spring.git`.
 
-2. Navega hasta el directorio del proyecto.
+2. Navigate to the project directory.
 
-3. Ejecuta el comando `mvn install` para descargar las dependencias.
+3. Run the command `mvn install` to download dependencies.
 
-4. Ejecuta el archivo `Main.java`.
+4. Run the `Main.java` file.
 
-La aplicación ahora debería estar ejecutándose en `http://localhost:8080`.
+The application should now be running at `http://localhost:8080`.
 
-## Cómo probar la aplicación con Postman
+## How to Test the Application with Postman
 
-1. Abre Postman.
+1. Open Postman.
 
-2. Para obtener las películas haz una solicitud GET a `http://localhost:8080/movies/get`.
+2. To get movies, make a GET request to `http://localhost:8080/movies/get`.
 
-3. Para crear una nueva película, haz una solicitud POST a `http://localhost:8080/movies/create` con el cuerpo de la solicitud en formato JSON, por ejemplo:
+3. To create a new movie, make a POST request to `http://localhost:8080/movies/create` with the request body in JSON format, for example:
 
 ```json
 {
@@ -42,7 +42,7 @@ La aplicación ahora debería estar ejecutándose en `http://localhost:8080`.
 }
 ```
 
-4. Para actualizar una  película existente, haz una solicitud PUT a `http://localhost:8080/movies/update/{id}` con el cuerpo de la solicitud en formato JSON, por ejemplo:
+4. To update an existing movie, make a PUT request to `http://localhost:8080/movies/update/{id}` with the request body in JSON format, for example:
 
 ```json
 {
@@ -54,6 +54,6 @@ La aplicación ahora debería estar ejecutándose en `http://localhost:8080`.
 }
 ```
 
-Para eliminar una película, haz una solicitud DELETE a `http://localhost:8080/movies/delete/{id}`.
+To delete a movie, make a DELETE request to `http://localhost:8080/movies/delete/{id}`.
 
-Recuerda reemplazar `{id}` con el ID de la película que deseas obtener o eliminar.
+Remember to replace `{id}` with the ID of the movie you want to retrieve or delete.
